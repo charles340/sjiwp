@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: #555;
+            animation: slideDown 2s ease-in-out;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #282828;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            animation: fadeInUp 2s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+        .gallery img {
+            filter: grayscale(1);
+            cursor: pointer; /* Promijeni pokazivač miša */
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none; /* Početno stanje je sakriveno */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .close, .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            user-select: none;
+        }
+        .close {
+            right: 20px;
+        }
+        .prev {
+            left: 20px;
+        }
+        .next {
+            right: 60px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Galerija</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="o_meni.html">O meni</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="zadatci.html">Zadatci</a>
+    </nav>
+
+    <main>
+        <h2>Galerija slika</h2>
+        <div class="gallery">
+            <img src="00-OOREND24_IM12hr-0306.jpg" alt="Slika 1" onclick="openLightbox(0)">
+            <img src="00-OOREND24_IM12hr-3606.jpg" alt="Slika 2" onclick="openLightbox(1)">
+            <img src="01-OOREND24_IM12hr-1306.jpg" alt="Slika 3" onclick="openLightbox(2)">
+            <img src="01-OOREND24_IM12hr-2004.jpg" alt="Slika 4" onclick="openLightbox(3)">
+            <img src="01-OOREND24_IM12hr-4106.jpg" alt="Slika 5" onclick="openLightbox(4)">
+            <img src="02-OOREND24_IM12hr-1907.jpg" alt="Slika 6" onclick="openLightbox(5)">
+            <img src="03-OOREND24_IM12hr-4504.jpg" alt="Slika 7" onclick="openLightbox(6)">
+            <img src="03-OOREND24_IM12hr-5605.jpg" alt="Slika 8" onclick="openLightbox(7)">
+            <img src="04-OOREND24_IM12hr-0707.jpg" alt="Slika 9" onclick="openLightbox(8)">
+            <img src="04-OOREND24_IM12hr-3304.jpg" alt="Slika 10" onclick="openLightbox(9)">
+            <img src="04-OOREND24_IM12hr-5003.jpg" alt="Slika 11" onclick="openLightbox(10)">
+            <img src="05-OOREND24_IM12hr-1307.jpg" alt="Slika 12" onclick="openLightbox(11)">
+            <img src="05-OOREND24_IM12hr-2107.jpg" alt="Slika 13" onclick="openLightbox(12)">
+            <img src="05-OOREND24_IM12hr-3405.jpg" alt="Slika 14" onclick="openLightbox(13)">
+            <img src="05-OOREND24_IM12hr-5103.jpg" alt="Slika 15" onclick="openLightbox(14)">
+            <img src="06-OOREND24_IM12hr-5904.jpg" alt="Slika 16" onclick="openLightbox(15)">
+            <img src="07-OOREND24_IM12hr-0207.jpg" alt="Slika 17" onclick="openLightbox(16)">
+            <img src="07-OOREND24_IM12hr-0307.jpg" alt="Slika 18" onclick="openLightbox(17)">
+            <img src="08-OOREND24_IM12hr-0606.jpg" alt="Slika 19" onclick="openLightbox(18)">
+            <img src="09-OOREND24_IM12hr-1205.jpg" alt="Slika 20" onclick="openLightbox(19)">
+            <img src="09-OOREND24_IM12hr-3305.jpg" alt="Slika 21" onclick="openLightbox(20)">
+            <img src="09-OOREND24_IM12hr-3404.jpg" alt="Slika 22" onclick="openLightbox(21)">
+            <img src="09-OOREND24_IM12hr-4506.jpg" alt="Slika 23" onclick="openLightbox(22)">
+            <img src="10-OOREND24_IM12hr-1305.jpg" alt="Slika 24" onclick="openLightbox(23)">
+            <img src="11-OOREND24_IM12hr-0807.jpg" alt="Slika 25" onclick="openLightbox(24)">
+            <img src="11-OOREND24_IM12hr-2104.jpg" alt="Slika 26" onclick="openLightbox(25)">
+            <img src="11-OOREND24_IM12hr-2204.jpg" alt="Slika 27" onclick="openLightbox(26)">
+            <img src="11-OOREND24_IM12hr-3903.jpg" alt="Slika 28" onclick="openLightbox(27)">
+            <img src="11-OOREND24_IM12hr-4404.jpg" alt="Slika 29" onclick="openLightbox(28)">
+            <img src="11-OOREND24_IM12hr-5806.jpg" alt="Slika 30" onclick="openLightbox(29)">
+            <img src="12-OOREND24_IM12hr-1905.jpg" alt="Slika 31" onclick="openLightbox(30)">
+            <img src="13-OOREND24_IM12hr-0507.jpg" alt="Slika 32" onclick="openLightbox(31)">
+            <img src="14-OOREND24_IM12hr-1604.jpg" alt="Slika 33" onclick="openLightbox(32)">
+            <img src="20231113_073747.jpg" alt="Slika 34" onclick="openLightbox(33)">
+            <img src="20240927_121735.jpg" alt="Slika 35" onclick="openLightbox(34)">
+            <img src="20230629211840_521A4936.jpg" alt="Slika 36" onclick="openLightbox(35)">
+            <img src="BMW-SUSRET-5-960x1707(1).png" alt="Slika 37" onclick="openLightbox(36)">
+            <img src="IMG_20230630_221212_689.jpg" alt="Slika 38" onclick="openLightbox(37)">
+            <img src="IMG-20240820-WA0007.jpg" alt="Slika 39" onclick="openLightbox(38)">
+            
+        </div>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Moja Galerija</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = images[currentIndex].src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; // Ide na posljednju sliku
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0; // Ide na prvu sliku
+            }
+            document.getElementById('lightbox-img').src = images[currentIndex].src;
+        }
+    </script>
+</body>
+</html>

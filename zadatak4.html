@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recept - Durum Kebab</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(190, 16, 4, 0.432); /* Transparent overlay */
+            z-index: 0;
+        }
+
+        /* Content comes above the overlay */
+        header, section, footer {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #313131;
+            color: rgb(221, 217, 217);
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffdd57;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: rgba(245, 71, 71, 0.9); /* Semi-transparent background for readability */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            color: #f4f4f4;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+            margin-bottom: 1em;
+        }
+
+        section ul, section ol {
+            margin: 1em 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+
+        section ul {
+            list-style: disc;
+        }
+
+        section ol {
+            list-style: decimal;
+        }
+
+        section li {
+            margin: 0.5em 0;
+        }
+
+        .links a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin-right: 1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #f4b400;
+            transform: scale(1.05);
+        }
+
+        img {
+            display: block;
+            margin: 1.5em auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #242323;
+            color: rgb(241, 237, 237);
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="links">
+        <h1>Durum Kebab </h1>
+        <nav>
+            <a href="zadatci.html">Povratak na stranicu zadataka</a>
+            <a href="index.html">Povratak na početnu stranicu</a>
+        </nav>
+        </div>
+    </header>
+
+    <section>
+        <h2>Sastojci</h2>
+        <ul>
+            <li>500g junetine</li>
+            <li>4 tortilje (velike)</li>
+            <li>200g salate (zelena ili kupus)</li>
+            <li>100g cherry rajčica</li>
+            <li>100g feta sira</li>
+            <li>100ml jogurta</li>
+            <li>2 češnja češnjaka</li>
+            <li>1 žličica mljevene paprike</li>
+            <li>1 žličica kumina</li>
+            <li>Sol i papar po ukusu</li>
+        </ul>
+
+        <h2>Postupak pripreme</h2>
+        <ol>
+            <li>Izrežite junetinu na trakice i marinirajte s mljevenom paprikom, kuminom, solju i paprom.</li>
+            <li>U tavi zagrijte malo ulja i popržite juneće trakice dok ne postanu zlatno smeđe.</li>
+            <li>Pripremite umak od jogurta: pomiješajte jogurt s usitnjenim češnjakom i malo soli.</li>
+            <li>Na tortilje rasporedite salatu, nasjeckane rajčice i feta sir.</li>
+            <li>Dodajte prženo meso i prelijte jogurtovim umakom.</li>
+            <li>Zarolajte tortilje u čvrsti rolat i poslužite.</li>
+        </ol>
+
+        <img src="durum-kebab.jpg" alt="Durum kebab" />
+
+        <div class="links">
+            <h2>Više recepata</h2>
+            <a href="https://recepti.index.hr/recept/672-doner-kebab" target="_blank">Recept 1</a>
+            <a href="https://istanbul.com/hr/about-city/a-delicious-non-veg-wrap-turkish-durum" target="_blank">Recept 2</a>
+            <a href="https://web.coolinarika.com/recept/ev-yapimi-tavuk-doner-pileci-doner-kebab-mehdi-kebab-633257e4-6496-11eb-8acd-0242ac1200a1" target="_blank">Recept 3</a>
+        </div>
+    </section>
+    <header>
+
+    <footer>
+        <p>&copy; 2024 Karlo Babić </p>
+    </footer>
+</body>
+</html>

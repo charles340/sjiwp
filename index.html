@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Prva Web Stranica</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            background: url('20240927_121735.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: grayscale(100%); /* Crno-bijela slika */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Crna prozirna boja */
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.7); /* Crna prozirna boja */
+            animation: slideDown 2s ease-in-out;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+        main {
+            padding: 2em;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Tamna prozirna pozadina */
+            max-width: 800px;
+            margin: 2em auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 2s ease-in-out;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Animacije */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dobrodošli na Moju Prvu Web Stranicu</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="o_meni.html">O meni</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="zadatci.html">Zadatci</a>
+    </nav>
+
+    <main>
+        <h2>Ovo je moj prvi paragraf na Početnoj stranici</h2>
+        <p>Ovo je primjer jednostavne web stranice izrađene u HTML-u. HTML je osnovni jezik za kreiranje web stranica.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Moja Prva Web Stranica. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>

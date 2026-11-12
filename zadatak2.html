@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 2 - Automobili</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('11-OOREND24_IM12HR-2104.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Transparent overlay */
+            z-index: 0;
+        }
+
+        /* Content comes above the overlay */
+        header, section, footer {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: #555;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: rgba(40, 40, 40, 0.9); /* Semi-transparent background for readability */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+            margin-bottom: 1em;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            margin: 10px 0;
+        }
+
+        .task-list a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .task-list a:hover {
+            color: #f4b400;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zadaci s nastave</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="o_meni.html">O meni</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="zadatci.html">Zadaci</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Zadatak 2 - 10 najboljih automobila svih vremena</h2>
+        <p>
+           U ovome zadatku ću vam predstaviti deset mojih najdražih automobila.
+        </p>
+        <ul class="task-list">
+            <li><a href="Mclaren.html">Mclaren 720s GT3 Evo</a></li>
+            <li><a href=".html"></a></li>
+            <li><a href=".html"> </a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Karlo Babić - Zadaci</p>
+    </footer>
+</body>
+</html>

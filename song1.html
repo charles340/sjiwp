@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Hast - Rammstein</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('wallpaperflare.com_wallpapeer.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Transparent overlay */
+            z-index: 0;
+        }
+
+        /* Content comes above the overlay */
+        header, section, footer {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: #555;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: rgba(40, 40, 40, 0.9); /* Semi-transparent background for readability */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+            margin-bottom: 1em;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+
+        .lyrics {
+            margin-top: 2em;
+        }
+
+        .lyrics p {
+            font-style: italic;
+            line-height: 1.8em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rammstein - Du Hast</h1>
+        <nav>
+            <a href="zadatak1.html">Nazad na Rammstein</a>
+            <a href="song2.html">Sljedeća pjesma - Engel</a>
+            <a href="song3.html">Pjesma 3 - Wollt ihr das Bett in Flammen sehen</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Du Hast - Pregled</h2>
+        <p>
+            "Du Hast" je jedna od najpoznatijih pjesama njemačkog industrial metal benda Rammstein. Pjesma je objavljena na njihovom drugom albumu "Sehnsucht" 1997. godine i postala je veliki hit na međunarodnoj sceni. Poznata je po svojoj energičnoj izvedbi, teškim gitarskim riffovima i dvostrukom značenju riječi u njemačkom jeziku, gdje "Du hast" može značiti "ti imaš" ili "ti mrziš". Rammstein često koristi ovu dvosmislenost u svojim pjesmama, poigravajući se riječima i značenjima.
+        </p>
+
+        <div class="lyrics">
+            <h3>Stihovi:</h3>
+            <p>
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich, du hast mich<br>
+                Du hast mich gefragt, du hast mich gefragt<br>
+                Du hast mich gefragt und ich hab' nichts gesagt<br><br>
+            
+                Willst du bis der Tod euch scheidet<br>
+                Treu ihr sein für alle Tage?<br>
+                Nein!<br>
+                Nein!<br><br>
+            
+                Willst du bis der Tod euch scheidet<br>
+                Treu ihr sein für alle Tage?<br>
+                Nein!<br>
+                Nein!<br><br>
+            
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich<br>
+                Du, du hast, du hast mich, du hast mich<br>
+                Du hast mich gefragt, du hast mich gefragt<br>
+                Du hast mich gefragt und ich hab' nichts gesagt<br><br>
+            
+                Willst du bis der Tod euch scheidet<br>
+                Treu ihr sein für alle Tage?<br>
+                Nein!<br>
+                Nein!<br><br>
+            
+                Willst du bis zum Tod der Scheide<br>
+                Sie lieben auch in schlechten Tagen?<br>
+                Nein!<br>
+                Nein!<br><br>
+            
+                Willst du bis der Tod euch scheidet<br>
+                Treu ihr sein?<br>
+                Nein!<br>
+                Nein!
+            </p>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Karlo Babić - Zadaci</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadaci</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: #555;
+            animation: slideDown 2s ease-in-out;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: #282828;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        main h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+        }
+        main form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+        main form input, main form textarea {
+            padding: 0.75em;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+            font-size: 1em;
+        }
+        main form input::placeholder, main form textarea::placeholder {
+            color: #ccc;
+        }
+        main form button {
+            padding: 1em;
+            background-color: #ffdd57;
+            color: #333;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        main form button:hover {
+            background-color: #f4b400;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .task-list a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin-right: 1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .task-list a:hover {
+            color: #f4b400;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zadaci s nastave</h1>
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="o_meni.html">O meni</a>
+                <a href="kontakt.html">Kontakt</a>
+               <a href="galerija.html">Galerija</a> 
+                <a href="zadatci.html">Zadaci</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Popis zadataka</h2>
+        <ul class="task-list">
+            <li><a href="zadatak1.html">Zadatak 1 - Rammstein</a></li>
+            <li><a href="zadatak2.html">Zadatak 2 - Automobili</a></li>
+            <li><a href="zadatak3.html">Zadatak 3 - Riječki Lokaliteti</a></li>
+            <li><a href="zadatak4.html">Zadatak 4 - Durum</a></li>
+            <li><a href="gastro.html">Zadatak 5- gastro preporuka</a></li>
+            <li><a href="zadatak5.html">Zadatak 5-</a></li>
+            <li><a href="Film.html" >Zadatak 6 - Filmovi i serije </a></li>
+            <!-- Dodaj više zadataka -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Karlo Babić - Zadaci</p>
+    </footer>
+</body>
+</html>

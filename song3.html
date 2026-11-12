@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wollt ihr das Bett in Flammen sehen- Rammstein</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('flammen.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Transparent overlay */
+            z-index: 0;
+        }
+
+        /* Content comes above the overlay */
+        header, section, footer {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+            background-color: #555;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 2em;
+            background-color: rgba(40, 40, 40, 0.9); /* Semi-transparent background for readability */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #ffdd57;
+            margin-bottom: 1em;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+
+        .lyrics {
+            margin-top: 2em;
+        }
+
+        .lyrics p {
+            font-style: italic;
+            line-height: 1.8em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rammstein - Wollt ihr das Bett in Flammen sehen</h1>
+        <nav>
+            <a href="zadatak1.html">Nazad na Rammstein</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Wollt ihr das Bett in Flammen sehen - Pregled</h2>
+        <p>
+            "Wollt ihr das Bett in Flammen sehen" jedna je od najranijih pjesama Rammsteina i otvara njihov debitantski album *Herzeleid*, objavljen 1995. godine. Pjesma je primjer sirovog, industrijskog zvuka benda, s tekstom koji kombinira provokativne i apokaliptične slike. 
+            Stihovi pjesme govore o destruktivnim strastima, vatri i želji, što se odražava i u energičnom, eksplozivnom zvuku pjesme. Ova pjesma postala je simbolom jedinstvenog stila benda, s prepoznatljivim teškim gitarskim riffovima i moćnim vokalom Tilla Lindemanna, te je često izvedena uživo na njihovim ranim koncertima.
+        </p>
+        
+        
+        <div class="lyrics">
+            <h3>Stihovi:</h3>
+            <p>
+                Wollt ihr das Bett in Flammen sehen?<br>
+                Wollt ihr in Haut und Haaren untergehen?<br>
+                Ihr wollt doch auch den Dolch ins Laken stecken<br>
+                Ihr wollt doch auch das Blut vom Degen lecken<br>
+            </p>
+            
+            <p>
+                Rammstein x3<br>
+            </p>
+            
+            <p>
+                Ihr seht die Kreuze auf dem Kissen<br>
+                Ihr meint, euch darf die Unschuld küssen<br>
+                Ihr glaubt, zu töten wäre schwer<br>
+                Doch wo kommen all die Toten her?<br>
+            </p>
+            
+            <p>
+                Rammstein x3<br>
+            </p>
+            
+            <p>
+                Sex ist eine Schlacht<br>
+                Liebe ist Krieg<br>
+                Sex ist eine Schlacht, ja<br>
+                Liebe ist Krieg<br>
+                Sex ist eine Schlacht<br>
+                Liebe ist Krieg<br>
+                Sex ist eine Schlacht, ja<br>
+                Liebe ist Krieg<br>
+            </p>
+            
+            <p>
+                Wollt ihr das Bett in Flammen sehen?<br>
+                Wollt ihr in Haut und Haaren untergehen?<br>
+                Ihr wollt doch auch den Dolch ins Laken stecken<br>
+                Ihr wollt doch auch das Blut vom Degen lecken<br>
+            </p>
+            
+            <p>
+                Rammstein x16<br>
+            </p>
+             
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Karlo Babić - Zadaci</p>
+    </footer>
+</body>
+</html>
